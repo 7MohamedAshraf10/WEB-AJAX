@@ -1,0 +1,63 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(3.jpg);
+  background-position: center;
+}
+
+.Calculator_Screen {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+}
+
+.Calculator_Screen > button {  
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bolder;
+  border: 2px solid black;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+.Calculator_Screen > button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.Clear {
+  grid-column: span 2;
+}
+
+.output {
+    border-radius: 30px;
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .pervious_factor {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+.output .current_factor {
+  color: white;
+  font-size: 2.5rem;
+}
